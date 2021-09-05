@@ -338,8 +338,6 @@ background-color:  #2196F3;
   height: 100%;
   border-radius: 50%;
   transition: background-color var(--time) var(--main-function),
-  fill var(--time) var(--main-function),
-  cursor var(--time) var(--main-function);
 }
 
 .networks-icon {
@@ -349,20 +347,18 @@ background-color:  #2196F3;
   width: 20px;
   height: 20px;
   fill: #afb1b8;
-  transition: background-color var(--time) var(--main-function),
-  fill var(--time) var(--main-function),
-  cursor var(--time) var(--main-function);
+  transition: fill var(--time) var(--main-function);
 }
 
 .networks-link:hover,
-.networks-link:focus,
-.networks-link:hover .networks-icon,
-.networks-link:focus .networks-icon {
+.networks-link:focus{
   background-color: #2196f3;
-  fill: #ffffff;
-  cursor: pointer;
 }
 
+.networks-link:hover .networks-icon,
+.networks-link:focus .networks-icon {
+  fill: #ffffff;
+}
 .box-team {
   background-color: #ffffff;
   border-left: 1px solid #ececec;
@@ -403,8 +399,7 @@ background-color:  #2196F3;
 
 .clients-icon {
   fill: #afb1b8;
-  transition: border var(--time) var(--main-function),
-              fill var(--time) var(--main-function);
+  transition: fill var(--time) var(--main-function);
 
 }
 
@@ -514,7 +509,6 @@ address {
   border-radius: 4px;
   padding: 6px 22px;
   transition: background-color var(--time) var(--main-function),
-              color var(--time) var(--main-function),
              box-shadow var(--time) var(--main-function);
 }
 
@@ -577,7 +571,7 @@ address {
   overflow: hidden;
 }
 
-.photo-box:hover .overlay {
+.photo-link:hover .overlay {
   transform: translatey(0);
 }
 
@@ -650,13 +644,13 @@ address {
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 
 @keyframes logoanimation {
  0% {
     transform: rotateX(0deg);
-    ;
   }
 
   100% {
